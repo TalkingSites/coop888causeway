@@ -1,0 +1,24 @@
+---
+layout: base.njk
+fullBleed: true
+---
+<section class="head head-ink">
+<div class="container">
+<p class="head-date">{{ eventDate | formatDate }}</p>
+<h1>{{ title }}</h1>
+</div>
+</section>
+<section class="band">
+<div class="container event-page">
+<div class="event-body">
+{% if description %}<p class="lead">{{ description }}</p>{% endif %}
+{{ content | safe }}
+{% if link %}<p class="mt-4"><a class="btn-888" href="{{ link }}" target="_blank" rel="noopener">{{ text }}</a></p>{% endif %}
+</div>
+<aside class="event-facts">
+{% if startTime %}<div><i class="bi bi-clock" aria-hidden="true"></i><span>{{ startTime }}{% if endTime %} to {{ endTime }}{% endif %}</span></div>{% endif %}
+{% if location %}<div><i class="bi bi-geo-alt" aria-hidden="true"></i>{% if locationLink %}<a class="text-preline" href="{{ locationLink }}" target="_blank" rel="noopener">{{ location }}</a>{% else %}<span class="text-preline">{{ location }}</span>{% endif %}</div>{% endif %}
+<a class="back" href="/events/"><i class="bi bi-arrow-left" aria-hidden="true"></i> All events</a>
+</aside>
+</div>
+</section>

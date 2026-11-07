@@ -1,3 +1,46 @@
 {
-  "items": []
+  "items": [
+    {
+      "name": "membership",
+      "label": "Membership levels",
+      "singular": "Level",
+      "icon": "person-badge",
+      "description": "The ways to join 888 Causeway.",
+      "fields": [
+        { "name": "price", "label": "Price", "type": "text", "required": true },
+        { "name": "period", "label": "Period", "type": "text" },
+        { "name": "summary", "label": "Who it's for", "type": "text" },
+        { "name": "includes", "label": "What's included", "type": "list" },
+        { "name": "action", "label": "Button text", "type": "text" },
+        { "name": "actionLink", "label": "Button link", "type": "link" },
+        { "name": "order", "label": "Order", "type": "number" },
+        { "name": "highlight", "label": "Highlight this level", "type": "yesno" }
+      ]
+    },
+    {
+      "name": "members",
+      "label": "Members",
+      "singular": "Member",
+      "icon": "people",
+      "description": "The co-ops and organisations that work from, or are registered at, 888 Causeway.",
+      "fields": [
+        { "name": "logo", "label": "Logo", "type": "image" },
+        { "name": "website", "label": "Website", "type": "link" },
+        { "name": "about", "label": "About", "type": "longtext" },
+        { "name": "group", "label": "Membership", "type": "choice", "options": ["Co-working", "Registered address"] }
+      ]
+    },
+    {
+      "name": "about",
+      "label": "Board and patrons",
+      "singular": "Person",
+      "icon": "person",
+      "description": "The people who govern and support the co-op.",
+      "fields": [
+        { "name": "role", "label": "Role", "type": "text" },
+        { "name": "group", "label": "Group", "type": "choice", "options": ["Board", "Patrons"] },
+        { "name": "order", "label": "Order", "type": "number" }
+      ]
+    }
+  ]
 }

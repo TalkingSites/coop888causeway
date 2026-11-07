@@ -1,0 +1,5 @@
+<ul class="people">
+{% for p in collections.about | sort(false, false, "data.order") %}{% if p.data.group == peopleGroup %}
+<li><b>{{ p.data.title }}</b><span>{{ p.data.role }}</span></li>
+{% endif %}{% endfor %}
+</ul>

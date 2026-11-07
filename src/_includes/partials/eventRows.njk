@@ -1,0 +1,7 @@
+{% for e in rows %}
+<a class="event-row" href="{{ e.url }}">
+<time datetime="{{ e.data.eventDate | formatDate('YYYY-MM-DD') }}"><b>{{ e.data.eventDate | formatDate("D MMM") }}</b> {{ e.data.eventDate | formatDate("YYYY") }}</time>
+<div><h3>{{ e.data.title }}</h3>{% if rowDetail and e.data.description %}<p>{{ e.data.description }}</p>{% endif %}</div>
+<i class="bi bi-arrow-right" aria-hidden="true"></i>
+</a>
+{% endfor %}

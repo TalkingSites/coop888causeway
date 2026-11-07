@@ -1,0 +1,6 @@
+{% if collections.upcomingEvents | length %}
+<h3 class="list-title">Coming up</h3>
+{% set rows = collections.upcomingEvents %}{% set rowDetail = true %}{% include "partials/eventRows.njk" %}
+{% else %}
+<div class="none-yet"><p>Nothing is booked just now. Follow us on Humanitix and you'll hear as soon as the next one is.</p><a class="btn-888" href="https://events.humanitix.com/host/888-co-operative-causeway" rel="noopener">Follow on Humanitix</a></div>
+{% endif %}

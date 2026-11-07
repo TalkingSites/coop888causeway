@@ -1,0 +1,10 @@
+<div class="field"><label for="street">Street address</label><input id="street" name="Street address" autocomplete="address-line1" required/></div>
+<div class="field"><label for="street2">Address line 2 <span>(optional)</span></label><input id="street2" name="Address line 2" autocomplete="address-line2"/></div>
+<div class="field-row">
+<div class="field"><label for="city">City</label><input id="city" name="City" autocomplete="address-level2" required/></div>
+<div class="field"><label for="state">State / Province / Region</label><input id="state" name="State" autocomplete="address-level1" required/></div>
+</div>
+<div class="field-row">
+<div class="field"><label for="postcode">Postcode</label><input id="postcode" name="Postcode" autocomplete="postal-code" required/></div>
+<div class="field"><label for="country">Country</label><select id="country" name="Country" autocomplete="country-name" required>{% for c in countries %}<option{% if c == "Australia" %} selected{% endif %}>{{ c }}</option>{% endfor %}</select></div>
+</div>

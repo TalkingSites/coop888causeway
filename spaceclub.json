@@ -2,18 +2,42 @@
   "preset": "community",
   "features": {
     "events": true,
-    "posts": true,
+    "posts": false,
     "contentTypes": true,
     "search": true,
     "gallery": true,
-    "forms": true,
+    "forms": false,
     "rss": true,
     "webmcp": true
   },
   "look": {
     "modes": "light",
-    "colours": { "light": {}, "dark": {} },
-    "navbar": { "layout": "classic", "show": { "logo": true, "title": true, "search": true } },
-    "footer": { "divider": "stars", "dividerSvg": null, "colours": {} }
+    "colours": {
+      "light": {
+        "primary": "#0b5f56",
+        "secondary": "#fe802b",
+        "body": "#fbf8f1",
+        "text": "#10201d",
+        "link": "#0b5f56",
+        "border": "#ded8ca"
+      },
+      "dark": {}
+    },
+    "navbar": {
+      "layout": "classic",
+      "show": {
+        "logo": true,
+        "title": true,
+        "search": true
+      }
+    },
+    "footer": {
+      "divider": "none",
+      "dividerSvg": null,
+      "colours": {
+        "background": "#10201d",
+        "text": "#fbf8f1"
+      }
+    }
   }
 }

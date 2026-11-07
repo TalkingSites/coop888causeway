@@ -1,19 +1,10 @@
 {
   "items": [
-    {
-      "title": "Home",
-      "href": "/",
-      "footer": true
-    },
-    {
-      "title": "About",
-      "href": "/about",
-      "footer": true
-    },
-    {
-      "title": "Contact",
-      "href": "/contact",
-      "footer": true
-    }
+    { "title": "About", "href": "/about/", "footer": true },
+    { "title": "Membership", "href": "/membership/", "footer": true },
+    { "title": "Members", "href": "/members/", "footer": true },
+    { "title": "Events", "href": "/events/", "footer": true },
+    { "title": "Podcast", "href": "/podcast/", "footer": true },
+    { "title": "Contact", "href": "/contact/", "footer": true }
   ]
 }

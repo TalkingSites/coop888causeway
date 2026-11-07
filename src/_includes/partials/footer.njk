@@ -1,0 +1,38 @@
+<footer class="foot" id="footer-main">
+<div class="container">
+<div class="foot-news">
+<div>
+<h2>News from the <span class="nb">co-op,</span> now and then.</h2>
+<p>Events, member news and what's moving in Victoria's co-operative community.</p>
+</div>
+<form class="news-form" action="https://888causeway.us18.list-manage.com/subscribe/post" method="post" target="_blank">
+<input type="hidden" name="u" value="c5c0301fc893c0ab573b1929f"/>
+<input type="hidden" name="id" value="d3ce68e6c4"/>
+<label class="visually-hidden" for="news-email">Email address</label>
+<input id="news-email" type="email" name="MERGE0" placeholder="you@example.coop" autocomplete="email" required/>
+<div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_email" tabindex="-1" value=""/></div>
+<button class="btn-888" type="submit">Subscribe</button>
+</form>
+</div>
+<div class="foot-grid">
+<div>
+<img src="{{ site.logo }}" alt="" width="150" height="87" loading="lazy"/>
+</div>
+<address>
+888 Causeway Co-operative Limited<br/>
+Level 5, 306 Little Collins St<br/>
+Melbourne VIC 3000<br/>
+<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+</address>
+<ul class="foot-links">
+{% for item in navbar.items %}{% if item.footer %}<li><a href="{{ item.href }}">{{ item.title }}</a></li>{% endif %}{% endfor %}
+</ul>
+<ul class="foot-links">
+<li><a href="https://events.humanitix.com/host/888-co-operative-causeway" rel="noopener">Humanitix</a></li>
+<li><a href="https://www.patreon.com/coopcauseway/" rel="noopener">Patreon</a></li>
+<li><a href="/events/feed.xml">Events feed</a></li>
+</ul>
+</div>
+<p class="foot-base">© {{ global.currentYear }} 888 Causeway Co-operative Limited. Eight hours labour, eight hours recreation, eight hours rest.</p>
+</div>
+</footer>

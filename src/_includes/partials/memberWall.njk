@@ -1,0 +1,11 @@
+{% for group in ["Co-working", "Registered address"] %}
+<h3 class="list-title">{{ group }} members</h3>
+<div class="wall">
+{% for m in collections.members %}{% if m.data.group == group %}
+{% if m.data.website %}<a class="wall-item" href="{{ m.data.website }}" rel="noopener">{% else %}<div class="wall-item">{% endif %}
+<span class="wall-logo"><img src="{{ m.data.logo }}" alt="{{ m.data.title }}" loading="lazy"/></span>
+{% if wallDetail %}<p>{{ m.data.about }}</p>{% endif %}
+{% if m.data.website %}</a>{% else %}</div>{% endif %}
+{% endif %}{% endfor %}
+</div>
+{% endfor %}
