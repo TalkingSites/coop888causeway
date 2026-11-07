@@ -5,7 +5,7 @@
 <h3>{{ l.data.title }}</h3>
 <p class="price">{{ l.data.price }}{% if l.data.period %} <span>/ {{ l.data.period }}</span>{% endif %}</p>
 <p class="level-for">{{ l.data.summary }}</p>
-{% if levelDetail %}<ul>{% for i in l.data.includes %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
+{% if levelDetail == "yes" %}<ul>{% for i in l.data.includes %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
 <a class="btn-888{% if not l.data.highlight %} btn-line{% endif %}" href="{{ l.data.actionLink }}">{{ l.data.action }}</a>
 </article>
 {% endfor %}

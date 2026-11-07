@@ -1,0 +1,19 @@
+<section class="band band-white">
+<div class="container split split-text">
+<div class="rich">
+<h2>{{ sectionTitle }}</h2>
+{{ sectionText | markdown | safe }}
+{%- include "partials/sectionLink.njk" %}
+</div>
+<div class="people-cols">
+<div>
+<h3>{{ boardTitle }}</h3>
+{%- set peopleGroup = "Board" %}{% include "partials/people.njk" %}
+</div>
+<div>
+<h3>{{ patronsTitle }}</h3>
+{%- set peopleGroup = "Patrons" %}{% include "partials/people.njk" %}
+</div>
+</div>
+</div>
+</section>

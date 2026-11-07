@@ -71,13 +71,13 @@ striptags | replace("\n", " ") | truncate(240, true, "") }}
 </span>
 </div>
 <main id="content">
-{% if fullBleed %}{{ content | safe }}{% else %}<div class="container py-5 prose">{{ content | safe }}</div>{% endif %}
+{% if "<section" in content %}{{ content | safe }}{% else %}<div class="container py-5 prose">{{ content | safe }}</div>{% endif %}
 </main>
 </div>
 {% include "partials/footer.njk" %}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 {% if spaceclub.features.search %}<script src="/assets/js/search.js" defer></script>{% endif %}
-{% if joinForm %}<script src="/assets/js/join.js" defer></script>{% endif %}
+{% if 'id="join"' in content %}<script src="/assets/js/join.js" defer></script>{% endif %}
 {% if spaceclub.features.webmcp %}<script src="/assets/js/webmcp.js" defer></script>{% endif %}
 </body>
 </html>

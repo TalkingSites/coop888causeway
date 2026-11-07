@@ -1,0 +1,15 @@
+<section class="band band-ink">
+<div class="container split split-events">
+<div>
+<h2>{{ sectionTitle }}</h2>
+{{ sectionText | markdown | safe }}
+{%- if sectionImage %}<figure class="photo-door"><img src="{{ sectionImage }}" alt="{{ sectionAlt }}" loading="lazy"/></figure>{% endif %}
+</div>
+<div>
+{%- include "partials/upcoming.njk" %}
+<h3 class="list-title">Recently</h3>
+{%- set rows = collections.pastEvents | head(4) %}{% set rowDetail = false %}{% include "partials/eventRows.njk" %}
+<a class="link-arrow" href="/events/">All events <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+</div>
+</div>
+</section>
