@@ -1,0 +1,12 @@
+<section class="band {{ sectionBg }}">
+<div class="container">
+{%- if sectionTitle %}
+<div class="section-head">
+<h2>{{ sectionTitle }}</h2>
+<p>{{ sectionText }}</p>
+</div>
+{%- endif %}
+{%- include "partials/levels.njk" %}
+{%- if sectionNote %}<div class="after-levels">{{ sectionNote | markdown | safe }}</div>{% endif %}
+</div>
+</section>

@@ -1,0 +1,15 @@
+<section class="band {{ sectionBg }}" id="{{ sectionTitle | slugify }}">
+<div class="container split">
+{%- if sectionLayout == "left" %}
+<figure class="photo-{{ photoStyle or 'rounded' }}"><img src="{{ sectionImage }}" alt="{{ sectionAlt }}" loading="lazy"/></figure>
+{%- endif %}
+<div class="rich">
+<h2>{{ sectionTitle }}</h2>
+{{ sectionText | markdown | safe }}
+{%- include "partials/sectionLink.njk" %}
+</div>
+{%- if sectionLayout != "left" %}
+<figure class="photo-{{ photoStyle or 'rounded' }}"><img src="{{ sectionImage }}" alt="{{ sectionAlt }}" loading="lazy"/></figure>
+{%- endif %}
+</div>
+</section>

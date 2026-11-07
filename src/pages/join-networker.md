@@ -1,7 +1,5 @@
 ---
 layout: base.njk
-fullBleed: true
-joinForm: true
 title: Become a Networker member
 description: Apply to become a Networker member of 888 Co-operative Causeway Limited.
 permalink: "/join/networker/"
@@ -9,37 +7,7 @@ permalink: "/join/networker/"
 
 {% set headTitle = "Become a Networker member." %}
 {% set headLead = "For individuals who don't need co-working space right now but want to help build a like-minded community, and get our events and podcast. You become a co-owner with one vote." %}
+{% set headStyle = "aqua" %}
 {% include "partials/pageHead.njk" %}
 
-<section class="band">
-<div class="container join-wrap">
-{% include "partials/formDone.njk" %}
-<form class="join" id="join" data-subject="Networker membership application">
-<h2>Your details</h2>
-<div class="field-row">
-<div class="field"><label for="first">First name</label><input id="first" name="First name" autocomplete="given-name" required/></div>
-<div class="field"><label for="last">Last name</label><input id="last" name="Last name" autocomplete="family-name" required/></div>
-</div>
-<div class="field-row">
-<div class="field"><label for="email">Email</label><input id="email" type="email" name="Email" autocomplete="email" required/></div>
-<div class="field"><label for="email2">Confirm email</label><input id="email2" type="email" autocomplete="off" required/></div>
-</div>
-<div class="field"><label for="phone">Phone <span>(optional)</span></label><input id="phone" type="tel" name="Phone" autocomplete="tel"/></div>
-{% include "partials/formAddress.njk" %}
-{% include "partials/formAge.njk" %}
-<h2>Member application and agreement</h2>
-<div class="agreement">
-<p>Networker membership entitles the member to access to four events per calendar year and the co-op's podcast. The first year membership fee includes payment of $20 for two member shares in the co-operative. As at January 2022, the Networker membership fees are $150/year or $110/year for concession. Membership fees and levels of benefits are set from time to time by the board of the co-operative and may change.</p>
-<p>Networker memberships will be automatically renewed each year unless the member resigns from the co-operative. You can resign your membership by emailing the Secretary at <a href="mailto:coopcauseway@gmail.com">coopcauseway@gmail.com</a>.</p>
-<p>Members agree to be bound by the <a href="/assets/docs/888-co-operative-causeway-rules.pdf">rules of the co-operative</a> and the Co-operatives National Law, including any alterations thereof. Membership applications are subject to approval. If a membership application is not approved, any fees paid will be refunded.</p>
-</div>
-{% include "partials/formConsent.njk" %}
-<div class="choice"><input type="checkbox" id="agree" name="Member application and agreement" value="Agreed" required/><label for="agree">I apply to be admitted as a Networker member of 888 Co-operative Causeway Limited and to be allotted two member shares. I agree to be bound by the rules of the co-operative.</label></div>
-<h2>Membership and payment</h2>
-<div class="field"><label for="level">Networker membership</label><select id="level" name="Membership" data-total required><option value="Networker (full), $150" data-price="150">Networker (full), $150 a year</option><option value="Networker (concession), $110" data-price="110">Networker (concession), $110 a year</option></select></div>
-{% set joinTotal = "$150" %}
-{% include "partials/formPay.njk" %}
-<button class="btn-888" type="submit">Send application</button>
-</form>
-</div>
-</section>
+{% include "partials/joinNetworkerForm.njk" %}

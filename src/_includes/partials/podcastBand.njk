@@ -1,0 +1,11 @@
+<section class="band band-orange">
+<div class="container split split-pod">
+<div class="pod-art">{% include "partials/fish.njk" %}</div>
+<div>
+<h2>{{ sectionTitle | nbhyphen | safe }}</h2>
+<p class="pod-q">{{ sectionQuestion }}</p>
+<p>{{ sectionText }}</p>
+<div class="actions"><a class="btn-888 btn-ink" href="{{ sectionLinkUrl }}">{{ sectionLinkText }}</a></div>
+</div>
+</div>
+</section>

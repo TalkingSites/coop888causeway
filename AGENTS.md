@@ -141,6 +141,12 @@ Every `.md` file is processed as **Nunjucks first, then Markdown** (the `spacecl
 
 ---
 
+## This site's blocks
+
+Every page here is built only from blocks, so editors see forms in SpaceDash, never HTML. The blocks are defined in `src/admin/blocks.js` and each one renders a partial in `src/_includes/partials/`. To add a section: add the partial, add the block with all its fields to `blocks.js`, and keep the page body as nothing but `{% set %}` lines and includes. Raw HTML in a page body breaks SpaceDash's Rich Text view. A page containing a `<section` fills the width; any other page sits in a text column.
+
+---
+
 ## Partials reference
 
 All partials come from the `spaceclub` package (`node_modules/spaceclub/plugin/_includes/partials/`); a copy in `src/_includes/partials/` overrides one (`npx spaceclub customize partials/<name>.njk` makes the copy). Use them in any `.md` or `.njk` file with `{% include "partials/name.njk" %}`. Set variables with `{% set varName = value %}` before the include.

@@ -1,0 +1,14 @@
+<section class="band">
+<div class="container split split-text">
+<div class="story">
+<p class="lead">{{ sectionLead }}</p>
+{{ sectionText | markdown | safe }}
+</div>
+<aside class="purpose rich">
+<h2>{{ sideTitle }}</h2>
+{{ sideText | markdown | safe }}
+{%- if sectionLinkText %}<div class="actions"><a class="btn-888 btn-ink" href="{{ sectionLinkUrl }}">{{ sectionLinkText }}</a>
+{%- if sideLinkText %}<a class="link-arrow" href="{{ sideLinkUrl }}">{{ sideLinkText }} <i class="bi bi-arrow-right" aria-hidden="true"></i></a>{% endif %}</div>{% endif %}
+</aside>
+</div>
+</section>
