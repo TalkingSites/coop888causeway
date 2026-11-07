@@ -66,7 +66,7 @@ a { text-underline-offset: .18em; }
 /* Hero */
 .hero { background: var(--aqua); position: relative; overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); gap: clamp(1rem, 3vw, 3rem); align-items: center; padding-block: clamp(3rem, 7vw, 6.5rem); }
-.hero h1 { font-size: clamp(3.4rem, 8.4vw, 7.25rem); line-height: .92; margin-bottom: 1.5rem; }
+.hero h1 { font-size: clamp(3.4rem, 7vw, 7.25rem); line-height: .92; margin-bottom: 1.5rem; }
 .hero-lead { font-size: clamp(1.125rem, 1.6vw, 1.3rem); line-height: 1.5; margin: 0; max-width: 34em; }
 .hero-art { min-width: 0; }
 
@@ -284,3 +284,4 @@ p { text-wrap: pretty; }
 #searchModal .form-control { border: 1.5px solid #8f8a7c; }
 #searchResults a { color: var(--ink); }
 #searchResults h6 { font-family: var(--body); font-weight: 700; font-size: 1.05rem; }
+#searchResults .text-secondary { color: var(--ink) !important; }
